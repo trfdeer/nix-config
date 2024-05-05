@@ -1,10 +1,11 @@
 { defs, pkgs }: {
   programs.home-manager.enable = true;
 
-  xdg.enable = true;
-  xdg.mime.enable = true;
+  xdg.enable = !defs.isHeadless;
+  xdg.mime.enable = !defs.isHeadless;
+  fonts.fontconfig.enable = !defs.isHeadless;
+
   targets.genericLinux.enable = true;
-  fonts.fontconfig.enable = true;
 
   nix =
     if (defs.configureHomeOnly == true) then {
