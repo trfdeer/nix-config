@@ -100,6 +100,11 @@
         "--inlay-hints=true"
       ];
       "cmake.generator" = "Ninja";
+      "files.associatios" = {
+        "*.cppm" = "cpp";
+        ".clang-tidy" = "yaml";
+        ".clang-format" = "yaml";
+      };
 
       # Rust
       "rust-analyzer.check.command" = "clippy";
