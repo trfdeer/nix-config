@@ -100,6 +100,7 @@
         "--inlay-hints=true"
       ];
       "cmake.generator" = "Ninja";
+      "cmake.configureOnOpen" = false;
       "files.associations" = {
         "*.cppm" = "cpp";
         ".clang-tidy" = "yaml";
