@@ -43,9 +43,9 @@
       "editor.fontFamily" = "'Iosevka'";
       "debug.console.fontFamily" = "'Iosevka'";
       "terminal.integrated.fontFamily" = "'Iosevka'";
-      "editor.fontSize" = 15;
-      "debug.console.fontSize" = 15;
-      "terminal.integrated.fontSize" = 15;
+      "editor.fontSize" = 16;
+      "debug.console.fontSize" = 16;
+      "terminal.integrated.fontSize" = 16;
       "editor.fontLigatures" = false;
       "editor.cursorBlinking" = "solid";
       "editor.fontVariations" = true;
