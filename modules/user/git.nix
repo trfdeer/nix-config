@@ -11,6 +11,7 @@
     extraConfig = {
       init.defaultBranch = "main";
       gpg.format = "ssh";
+      gpg.ssh.program = "/opt/1Password/op-ssh-sign";
     };
   };
 
