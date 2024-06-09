@@ -20,6 +20,8 @@
       donjayamanne.githistory
       jnoortheen.nix-ide
       rust-lang.rust-analyzer
+      ms-vscode.hexeditor
+      redhat.vscode-xml
     ];
     keybindings = [
       {
@@ -34,12 +36,13 @@
       "workbench.activityBar.location" = "top";
       "telemetry.telemetryLevel" = "off";
       "security.workspace.trust.banner" = "always";
+      "redhat.telemetry.enabled" = false;
       "security.workspace.trust.untrustedFiles" = "open";
       "settingsSync.ignoredSettings" = [ ];
 
       # Appearance Settings
       "workbench.iconTheme" = "vscode-icons";
-      "workbench.colorTheme" = "Default Dark configrn";
+      "workbench.colorTheme" = "Default Dark Modern";
       "editor.fontFamily" = "'Iosevka'";
       "debug.console.fontFamily" = "'Iosevka'";
       "terminal.integrated.fontFamily" = "'Iosevka'";
@@ -100,7 +103,9 @@
         "--inlay-hints=true"
       ];
       "cmake.generator" = "Ninja";
-      "cmake.configureOnOpen" = false;
+      "cmake.showOptionsMovedNotification" = false;
+      "cmake.showConfigureWithDebuggerNotification" = false;
+      "cmake.configureOnOpen" = true;
       "files.associations" = {
         "*.cppm" = "cpp";
         ".clang-tidy" = "yaml";
