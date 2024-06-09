@@ -15,7 +15,7 @@
     nnn
     btop
 
-  ] ++ lib.optionals (defs.desktop.enable == true) [
+  ] ++ lib.optionals (defs.desktop.enable) [
     iosevka
   ];
 }

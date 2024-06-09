@@ -8,7 +8,7 @@
   targets.genericLinux.enable = true;
 
   nix =
-    if (defs.config.homeOnly == true) then {
+    if (defs.config.homeOnly) then {
       settings = {
         experimental-features = [ "nix-command" "flakes" ];
         auto-optimise-store = true;

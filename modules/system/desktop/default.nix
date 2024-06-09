@@ -3,10 +3,10 @@ let
   desktopPackages = {
     kde = (import ./kde.nix { inherit defs; });
   };
-  isDesktopKnown = defs ? "desktopName" && desktopPackages ? ${defs.desktopName};
+  isDesktopKnown = defs.desktop ? "environmentName" && desktopPackages ? ${defs.desktop.environmentName};
 in
 {
   imports = [
     (import ./audio.nix)
-  ] ++ lib.optionals (isDesktopKnown == true) [ desktopPackages.${defs.desktopName} ];
+  ] ++ lib.optionals (isDesktopKnown) [ desktopPackages.${defs.desktop.environmentName} ];
 }
