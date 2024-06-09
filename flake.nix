@@ -20,8 +20,8 @@
       defs = (import ./config.nix);
     in
     {
-      homeConfigurations = if (defs.configureHomeOnly == true) then (import ./home { inherit defs nixpkgs home-manager; }) else { };
-      nixosConfigurations = if (defs.configureHomeOnly == false) then (import ./os { inherit defs nixpkgs disko home-manager; }) else { };
-      devShells.${defs.system} = (import ./shells { inherit defs nixpkgs; });
+      homeConfigurations = if (defs.config.homeOnly == true) then (import ./home { inherit defs nixpkgs home-manager; }) else { };
+      nixosConfigurations = if (defs.config.homeOnly == false) then (import ./os { inherit defs nixpkgs disko home-manager; }) else { };
+      devShells.${defs.config.system} = (import ./shells { inherit defs nixpkgs; });
     };
 }

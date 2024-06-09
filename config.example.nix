@@ -1,19 +1,31 @@
 {
-  configureHomeOnly = true;
-  isHeadless = false;
-  isVmGuest = false;
-  enableRemoteAccess = false;
-  # desktopName = ""; # optional
+  config = {
+    homeOnly = false;
+    system = "x86_64-linux";
+  };
+
+  desktop = {
+    enable = true;
+    environmentName = "kde"; # Supported values: [none kde]
+  };
+
+  remoteAccess = {
+    ssh = {
+      enable = true;
+      authorizedKey = "";
+    };
+    rdp.enable = false;
+  };
+
 
   userName = "";
-  userSshKey = "";
-
   hostName = "";
-  system = ""; # x86_64-linux
 
-  git = {
-    userName = "";
-    userEmail = "";
-    signingKey = "";
+  programs = {
+    git = {
+      userName = "";
+      userEmail = "";
+      signingKey = "";
+    };
   };
 }

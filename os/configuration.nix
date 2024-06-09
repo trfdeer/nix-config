@@ -41,7 +41,7 @@
     isNormalUser = true;
     extraGroups = [ "wheel" ];
     initialHashedPassword = "";
-    openssh.authorizedKeys.keys = [ defs.userSshKey ];
+    openssh.authorizedKeys.keys = [ defs.remoteAccess.ssh.authorizedKey ];
     shell = pkgs.zsh;
   };
 

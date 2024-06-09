@@ -1,5 +1,5 @@
 { defs, nixpkgs }:
-let pkgs = nixpkgs.legacyPackages.${defs.system};
+let pkgs = nixpkgs.legacyPackages.${defs.config.system};
 in
 {
   nixdev = pkgs.mkShell {

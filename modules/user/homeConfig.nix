@@ -1,14 +1,14 @@
 { defs, pkgs }: {
   programs.home-manager.enable = true;
 
-  xdg.enable = !defs.isHeadless;
-  xdg.mime.enable = !defs.isHeadless;
-  fonts.fontconfig.enable = !defs.isHeadless;
+  xdg.enable = defs.desktop.enable;
+  xdg.mime.enable = defs.desktop.enable;
+  fonts.fontconfig.enable = defs.desktop.enable;
 
   targets.genericLinux.enable = true;
 
   nix =
-    if (defs.configureHomeOnly == true) then {
+    if (defs.config.homeOnly == true) then {
       settings = {
         experimental-features = [ "nix-command" "flakes" ];
         auto-optimise-store = true;

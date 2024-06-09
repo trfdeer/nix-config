@@ -1,11 +1,15 @@
-{ defs }: {
+{ defs }:
+let
+  gitConfig = defs.programs.git;
+in
+{
   programs.git = {
     enable = true;
     lfs.enable = true;
-    userName = defs.git.userName;
-    userEmail = defs.git.userEmail;
+    userName = gitConfig.userName;
+    userEmail = gitConfig.userEmail;
     signing = {
-      key = defs.git.signingKey;
+      key = gitConfig.signingKey;
       signByDefault = true;
     };
     extraConfig = {

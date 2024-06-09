@@ -7,6 +7,6 @@
 
   virtualisation.vmware.guest = {
     enable = true;
-    headless = defs.isHeadless;
+    headless = !defs.desktop.enable;
   };
 }

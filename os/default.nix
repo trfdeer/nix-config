@@ -1,6 +1,6 @@
 { defs, nixpkgs, disko, home-manager }:
 let
-  system = defs.system;
+  system = defs.config.system;
   pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
   lib = nixpkgs.lib;
 in

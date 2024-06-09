@@ -1,21 +1,21 @@
 { defs, pkgs }: {
-  home.packages = [
-    pkgs.zsh
-    pkgs.tmux
-    pkgs.git
+  home.packages = with pkgs; [
+    zsh
+    tmux
+    git
 
-    pkgs.coreutils
-    pkgs.aria2
-    pkgs.curl
+    coreutils
+    aria2
+    curl
 
-    pkgs.eza
-    pkgs.bat
-    pkgs.ripgrep
-    pkgs.fzf
-    pkgs.nnn
-    pkgs.btop
+    eza
+    bat
+    ripgrep
+    fzf
+    nnn
+    btop
 
-  ] ++ pkgs.lib.optionals (defs.isHeadless == false) [
-    pkgs.iosevka
+  ] ++ lib.optionals (defs.desktop.enable == true) [
+    iosevka
   ];
 }
