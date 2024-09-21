@@ -1,6 +1,10 @@
+{ defs }:
+let
+  enableGrub = !defs.prefs.isWsl;
+in
 {
   boot.loader.grub = {
-    enable = true;
+    enable = enableGrub;
     efiSupport = true;
     efiInstallAsRemovable = true;
     device = "nodev";

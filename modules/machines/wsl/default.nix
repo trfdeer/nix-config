@@ -1,7 +1,6 @@
 { defs, lib }:
 {
   imports = [
-    <nixos-wsl/modules>
     (import ./hardware-configuration.nix { inherit lib; })
   ];
 
