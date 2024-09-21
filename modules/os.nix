@@ -25,7 +25,6 @@ in
         inherit defs nixpkgs;
         machine = "vmware";
       })
-      nix-index-database.nixosModules.nix-index
       home-manager.nixosModules.home-manager
       {
         home-manager.useGlobalPkgs = true;
@@ -50,12 +49,13 @@ in
         machine = "wsl";
       })
       nixos-wsl.nixosModules.default
-      nix-index-database.nixosModules.nix-index
       home-manager.nixosModules.home-manager
       {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
-        home-manager.users.${defs.userName} = (import ./user.nix { inherit defs nixpkgs; });
+        home-manager.users.${defs.userName} = (
+          import ./user.nix { inherit defs nixpkgs nix-index-database; }
+        );
       }
     ];
   };

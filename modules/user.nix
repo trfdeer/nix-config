@@ -1,6 +1,11 @@
-{ defs, nixpkgs }:
+{
+  defs,
+  nixpkgs,
+  nix-index-database,
+}:
 {
   imports = [
+    nix-index-database.hmModules.nix-index
     (import ./packages {
       inherit defs nixpkgs;
       type = "user";

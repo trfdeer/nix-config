@@ -14,14 +14,13 @@ in
   ${defs.userName} = home-manager.lib.homeManagerConfiguration {
     inherit pkgs;
     modules = [
-      nix-index-database.hmModules.nix-index
       {
         home = {
           username = defs.userName;
           homeDirectory = "/home/${defs.userName}";
         };
       }
-      (import ./user.nix { inherit defs nixpkgs; })
+      (import ./user.nix { inherit defs nixpkgs nix-index-database; })
     ];
   };
 }

@@ -11,6 +11,7 @@
       coreutils
       aria2
       curl
+      wget
 
       eza
       bat
@@ -18,6 +19,7 @@
       fzf
       nnn
       btop
+      fd
 
     ]
     ++ lib.optionals (defs.desktop.enable) [ iosevka ];
