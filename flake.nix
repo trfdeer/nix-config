@@ -10,6 +10,8 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
+    nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
+
     nix-index-database.url = "github:nix-community/nix-index-database";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
   };
@@ -20,6 +22,7 @@
       disko,
       home-manager,
       nix-index-database,
+      nixos-wsl,
       ...
     }:
     let
@@ -47,6 +50,7 @@
               disko
               home-manager
               nix-index-database
+              nixos-wsl
               ;
           })
         else
