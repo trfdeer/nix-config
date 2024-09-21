@@ -1,0 +1,4 @@
+{ }:
+{
+  qt.kde.settings = { };
+}
