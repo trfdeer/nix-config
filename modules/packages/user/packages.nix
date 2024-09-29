@@ -23,6 +23,8 @@
 
       nixd
       nixfmt-rfc-style
+
+      uv
     ]
     ++ lib.optionals (defs.desktop.enable) [ iosevka ];
 }
