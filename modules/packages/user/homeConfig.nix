@@ -9,7 +9,7 @@
   targets.genericLinux.enable = true;
 
   nix =
-    if (defs.prefs.homeOnly) then
+    if (defs.config.homeOnly) then
       {
         settings = {
           experimental-features = [

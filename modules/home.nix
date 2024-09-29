@@ -6,7 +6,7 @@
 }:
 let
   pkgs = import nixpkgs {
-    system = defs.prefs.system;
+    system = defs.config.system;
     config.allowUnfree = true;
   };
 in

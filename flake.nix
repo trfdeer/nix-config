@@ -30,7 +30,7 @@
     in
     {
       homeConfigurations =
-        if (defs.prefs.homeOnly) then
+        if (defs.config.homeOnly) then
           (import ./modules/home.nix {
             inherit
               defs
@@ -42,7 +42,7 @@
         else
           { };
       nixosConfigurations =
-        if (defs.prefs.homeOnly == false) then
+        if (defs.config.homeOnly == false) then
           (import ./modules/os.nix {
             inherit
               defs
@@ -55,6 +55,6 @@
           })
         else
           { };
-      devShells.${defs.prefs.system} = (import ./modules/shells.nix { inherit defs nixpkgs; });
+      devShells.${defs.config.system} = (import ./modules/shells.nix { inherit defs nixpkgs; });
     };
 }

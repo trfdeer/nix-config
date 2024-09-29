@@ -1,6 +1,6 @@
 { defs }:
 let
-  enableGrub = !defs.prefs.isWsl;
+  enableGrub = !defs.config.isWsl;
 in
 {
   boot.loader.grub = {

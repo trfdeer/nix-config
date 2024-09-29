@@ -7,7 +7,7 @@
   nixos-wsl,
 }:
 let
-  system = defs.prefs.system;
+  system = defs.config.system;
 in
 {
   vmware = nixpkgs.lib.nixosSystem {

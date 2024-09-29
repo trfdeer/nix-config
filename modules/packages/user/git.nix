@@ -17,7 +17,7 @@ in
         init.defaultBranch = "main";
         gpg.format = "ssh";
       }
-      // lib.optionalAttrs defs.prefs.isWsl {
+      // lib.optionalAttrs defs.config.isWsl {
         core.sshCommand = "ssh.exe";
         "gpg \"ssh\"".program = "/mnt/c/Program Files/1Password/app/8/op-ssh-sign-wsl";
       };
