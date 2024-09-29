@@ -21,6 +21,8 @@
       btop
       fd
 
+      nixd
+      nixfmt-rfc-style
     ]
     ++ lib.optionals (defs.desktop.enable) [ iosevka ];
 }
