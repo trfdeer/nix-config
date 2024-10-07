@@ -12,6 +12,7 @@
       aria2
       curl
       wget
+      file
 
       eza
       bat
@@ -25,6 +26,7 @@
       nixfmt-rfc-style
 
       uv
+      bun
     ]
     ++ lib.optionals (defs.desktop.enable) [ iosevka ];
 }

@@ -51,7 +51,10 @@ in
 
   users.users.${defs.userName} = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ];
+    extraGroups = [
+      "wheel"
+      "libvirtd"
+    ];
     initialHashedPassword = "";
     openssh.authorizedKeys.keys = [ defs.remoteAccess.ssh.authorizedKey ];
     shell = pkgs.zsh;

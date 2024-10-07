@@ -14,4 +14,6 @@ in
     cleanOnBoot = true;
     tmpfsSize = "5GB";
   };
+
+  boot.extraModprobeConfig = "options kvm_intel nested=1";
 }
