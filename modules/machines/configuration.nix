@@ -31,6 +31,10 @@ in
     };
     package = pkgs.nixVersions.latest;
     registry.nixpkgs.flake = nixpkgs;
+
+    extraOptions = ''
+      trusted-users = root ${defs.userName}
+    '';
   };
   nixpkgs.config.allowUnfree = true;
 
