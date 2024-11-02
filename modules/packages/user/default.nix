@@ -17,7 +17,7 @@ in
 {
   imports =
     [
-      (import ./shell.nix)
+      (import ./shell.nix { inherit lib defs; })
       (import ./editor.nix)
       (import ./git.nix { inherit defs lib; })
       (import ./packages.nix { inherit defs pkgs; })

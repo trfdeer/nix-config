@@ -29,7 +29,9 @@ in
       {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
-        home-manager.users.${defs.userName} = (import ./user.nix { inherit defs nixpkgs; });
+        home-manager.users.${defs.userName} = (
+          import ./user.nix { inherit defs nixpkgs nix-index-database; }
+        );
       }
     ];
   };
